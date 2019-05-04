@@ -4,7 +4,7 @@ This lab converts an existing application to utilize a Redux store to manage sta
 
 ## Links and Resources
 - [Github Repo](https://github.com/401-advanced-javascript-1/project-6-resty)
-- [Heroku]()
+- [Heroku](https://stark-peak-18882.herokuapp.com/)
 
 # Modules
 - app.js: renders application components
