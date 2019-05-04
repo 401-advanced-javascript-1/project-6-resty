@@ -21,7 +21,7 @@ class History extends React.Component {
             <aside>
             <h2>History</h2>
             <ul id="history">
-            {this.state.history &&
+            {this.props.state.history &&
                 Object.keys(this.props.state.history).map(key => (
                 <li key={key} id={key} onClick={this.resetFormFromHistory}>
                     <span>
