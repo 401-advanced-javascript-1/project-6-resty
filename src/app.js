@@ -2,7 +2,7 @@ import './style/reset.css';
 import './style/style.css';
 
 import React from 'react';
-import History from './components/history/History.js';
+// import History from './components/history/History.js';
 import Header from './components/header/';
 import Footer from './components/footer/';
 import RESTy from './components/resty';
@@ -12,7 +12,6 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <Header />
-        {/* <History /> */}
         <RESTy />
         <Footer />
       </React.Fragment>
