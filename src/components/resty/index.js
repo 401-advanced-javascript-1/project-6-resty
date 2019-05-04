@@ -4,12 +4,14 @@ import React from 'react';
 import superagent from 'superagent';
 import ReactJson from 'react-json-view';
 import md5 from 'md5';
+import History from '../history/History.js';
+import Form from '../Form.js';
 
 class RESTy extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      url: '',
+      url: 'https://swapi.co/api/people',
       method: 'get',
       requestBody: '',
       username: '',
@@ -122,21 +124,11 @@ class RESTy extends React.Component {
   render() {
     return (
       <main>
-        <aside>
-          <h2>History</h2>
-          <ul id="history">
-            {this.state.history &&
-              Object.keys(this.state.history).map(key => (
-                <li key={key} id={key} onClick={this.resetFormFromHistory}>
-                  <span>
-                    <strong>{this.state.history[key].method}</strong>
-                  </span>
-                  <span>{this.state.history[key].host}</span>
-                  <span>{this.state.history[key].path}</span>
-                </li>
-              ))}
-          </ul>
-        </aside>
+
+        <History state={this.state}/>
+
+        {/* <Form /> */}
+
         <section className="deck">
           <form onSubmit={this.callAPI}>
             <section>
